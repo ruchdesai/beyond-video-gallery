@@ -1,0 +1,16 @@
+iframe {
+    height: 415px;
+    @media (max-width: 767.98px) {
+        height: 215px;
+    }
+}
+.back {
+    a {
+        font-size: 14px;
+        color: #51E3C2;
+        text-decoration: none;
+        img {
+            margin-right: 10px;
+        }
+    }
+}

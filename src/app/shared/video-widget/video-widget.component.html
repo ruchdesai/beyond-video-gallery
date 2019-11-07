@@ -8,8 +8,8 @@
             </span>
         </figcaption>
     </div>
-    <div class="details clearfix">
-        <p class="details-date">Published on {{content.contentDetails.videoPublishedAt | date: mediumDate}}</p>
-        <p class="details-description">{{content.snippet.description}}</p>
-    </div>
+    <app-details-widget
+        [date]="content.contentDetails.videoPublishedAt"
+        [description]="content.snippet.description">
+    </app-details-widget>
 </figure>

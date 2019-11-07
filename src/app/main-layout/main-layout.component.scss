@@ -1,7 +1,10 @@
 .main-layout {
-    background: url('../../assets/images/main_bg.png') no-repeat;
-    background-position: top;
+    background: url('../../assets/images/main_bg.png') no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    min-height: 100vh;
     height: 100%;
     .header {
         background: url('../../assets/images/header_bg.png');

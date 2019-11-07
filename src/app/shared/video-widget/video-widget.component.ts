@@ -1,16 +1,16 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-video-widget',
   templateUrl: './video-widget.component.html',
-  styleUrls: ['./video-widget.component.scss']
+  styleUrls: ['./video-widget.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class VideoWidgetComponent implements OnInit {
   _content;
   @Input() set content(value: any) {
     if (value) {
       this._content = value;
-      console.log(value);
     }
   }
   get content() {

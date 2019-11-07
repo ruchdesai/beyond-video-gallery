@@ -1,3 +1,27 @@
-<p>video-detail works!</p>
-
-<!-- <a href="https://www.youtube.com/watch?v={{videoId}}" target="_blank">Video Link</a> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <iframe
+                [src]="safeSrc"
+                width="100%"
+                frameborder="0"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <p class="pb-2">{{videoDetail?.title}}</p>
+            <app-details-widget
+                [date]="videoDetail?.date"
+                [description]="videoDetail?.description">
+            </app-details-widget>
+            <div class="back">
+                <a [routerLink]="['/list']">
+                    <img src="../../../assets/images/back_arrow.svg" alt="back_arrow">
+                    Back to list
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { VideoWidgetComponent } from './video-widget/video-widget.component';
+import { DetailsWidgetComponent } from './details-widget/details-widget.component';
 
 @NgModule({
     imports: [
@@ -10,7 +11,8 @@ import { VideoWidgetComponent } from './video-widget/video-widget.component';
         HttpClientModule
     ],
     declarations: [
-        VideoWidgetComponent
+        VideoWidgetComponent,
+        DetailsWidgetComponent
     ],
     exports: [
         // Modules
@@ -18,7 +20,8 @@ import { VideoWidgetComponent } from './video-widget/video-widget.component';
         HttpClientModule,
 
         // Components
-        VideoWidgetComponent
+        VideoWidgetComponent,
+        DetailsWidgetComponent
     ]
 })
 export class SharedModule { }
