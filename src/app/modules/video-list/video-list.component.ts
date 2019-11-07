@@ -9,17 +9,21 @@ import { Router } from '@angular/router';
 })
 export class VideoListComponent implements OnInit {
 
+  videos: any;
+
   constructor(
     private videoService: VideoService,
     private router: Router
-  ) { }
+  ) {
+    this.videoService.getVideos().subscribe((data) => {
+      this.videos = data.items;
+    });
+  }
 
   ngOnInit() {
-    this.videoService.getVideos().subscribe((data) => console.log(data));
   }
 
   goToVideoDetail(videoId) {
     this.router.navigate(['detail/' + videoId]);
   }
-
 }

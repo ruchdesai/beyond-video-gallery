@@ -1,0 +1,25 @@
+.video-widget {
+    .thumbnail {
+        .thumbnail-footer {
+            position: relative;
+            top: -40px;
+        }
+    }
+    .details {
+        color: #fff;
+        position: relative;
+        top: -20px;
+        font-size: 12px;
+        .details-date {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .details-description {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            font-weight: 300;
+        }
+    }
+}

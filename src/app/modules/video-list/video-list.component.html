@@ -1,2 +1,7 @@
-<p (click)="goToVideoDetail('X0qwQqwKLlM')">video-list works!</p>
-<app-video-widget></app-video-widget>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-12" *ngFor="let video of videos">
+            <app-video-widget [content]="video" (onClickVideoDetail)="goToVideoDetail($event)"></app-video-widget>
+        </div>
+    </div>
+</div>
