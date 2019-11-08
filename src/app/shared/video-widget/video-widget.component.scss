@@ -1,9 +1,18 @@
 .video-widget {
     cursor: pointer;
     .thumbnail {
+        .footer-helper {
+            padding: 0 15px;
+        }
         .thumbnail-footer {
             position: relative;
-            top: -40px;
+            top: -48px;
+            height: 48px;
+            background-color: rgba(0, 0, 0, 0.7);
+            .title {
+                font-family: AlfaSlabOne;
+                color: #51E3C2;
+            }
         }
     }
     .details {

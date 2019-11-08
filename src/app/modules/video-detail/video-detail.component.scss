@@ -4,11 +4,17 @@ iframe {
         height: 215px;
     }
 }
+.title {
+    font-family: AlfaSlabOne;
+    color: #51E3C2;
+    margin-bottom: 30px;
+}
 .back {
     a {
         font-size: 14px;
         color: #51E3C2;
         text-decoration: none;
+        font-family: Roboto-Thin;
         img {
             margin-right: 10px;
         }
