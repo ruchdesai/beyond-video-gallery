@@ -5,6 +5,8 @@ import { VideoListComponent } from './video-list.component';
 import { Router } from '@angular/router';
 import { NgZone } from '@angular/core';
 import { MainLayoutModule } from 'src/app/main-layout/main-layout.module';
+import { VideoService } from 'src/app/services/video-service/video.service';
+import { of } from 'rxjs';
 
 describe('VideoListComponent', () => {
   let component: VideoListComponent;
@@ -25,6 +27,22 @@ describe('VideoListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call getVideos() of Video Service on getVideos()', () => {
+    const data = {
+      items: [{
+        snippet: { title: 'title', description: 'description' },
+        contentDetails: { videoPublishedAt: 'date' }
+      }]
+    };
+    const vService = TestBed.get(VideoService);
+    spyOn(vService, 'getVideos').and.callFake(() => {
+      return of(data);
+    });
+    component.getVideos();
+    expect(vService.getVideos).toHaveBeenCalled();
+    expect(component.videos).not.toBe(null);
   });
 
   it('should call goToVideoDetail()', () => {

@@ -15,12 +15,16 @@ export class VideoListComponent implements OnInit {
     private videoService: VideoService,
     private router: Router
   ) {
-    this.videoService.getVideos().subscribe((data) => {
-      this.videos = data.items;
-    });
+    this.getVideos();
   }
 
   ngOnInit() {
+  }
+
+  getVideos() {
+    this.videoService.getVideos().subscribe((data) => {
+      this.videos = data.items;
+    });
   }
 
   goToVideoDetail(videoId) {
